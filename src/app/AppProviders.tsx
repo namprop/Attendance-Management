@@ -33,20 +33,7 @@ export default function AppProviders({ children }: { children: ReactNode }) {
     return <>{children}</>;
   }
   
-  if (typeof window !== 'undefined') {
-    if (!cookieBase.get('info_user')) {
-      cookieBase.set('info_user', {
-        id: 'admin',
-        _id: 'admin',
-        name: 'Admin Bypass',
-        username: 'admin',
-        role: { id: 0 },
-        employeeCode: 'EMP001',
-        employeeId: 'admin',
-      });
-      document.cookie = 'accessToken=bypassed_token; path=/';
-    }
-  }
+  // Removed auth bypass logic
 
   return (
     <QueryClientProvider client={queryClient}>

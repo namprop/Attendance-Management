@@ -14,8 +14,12 @@ export default function HomePage() {
   useEffect(() => {
     if (!loaded) return;
     
-    // Bypass auth: Go straight to dashboard
-    router.replace("/dashboard");
+    const token = cookieBase.get('accessToken');
+    if (token) {
+      router.replace("/dashboard");
+    } else {
+      router.replace("/login");
+    }
   }, [router, loaded]);
   
   return (
