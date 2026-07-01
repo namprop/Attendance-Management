@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
+import { ABCLogo } from '@/app/ui/base/abc-logo';
 import { MapPin, ChevronRight, Loader2, Building2, Wifi, Search, ChevronDown, Check } from "lucide-react";
 
 interface LocationItem {
@@ -76,14 +76,7 @@ export default function KioskSelectPage() {
       {/* Logo */}
       <div className="z-10 mb-10 flex flex-col items-center">
         <div className="bg-slate-950/40 backdrop-blur-md px-8 py-4 rounded-2xl border border-white/5 shadow-2xl flex flex-col items-center">
-          <Image
-            src="/images/hupuna-xanh.png"
-            alt="Hupuna Logo"
-            width={160}
-            height={50}
-            className="mb-1"
-            priority
-          />
+          <ABCLogo className="text-5xl mb-1" />
           <div className="text-[10px] uppercase tracking-[0.2em] text-blue-400 font-bold opacity-80">
             Enterprise Timekeeping
           </div>
@@ -93,7 +86,7 @@ export default function KioskSelectPage() {
       {/* Title */}
       <div className="z-10 text-center mb-8">
         <h1 className="text-3xl font-bold text-white mb-2">Chọn Cơ Sở Chấm Công</h1>
-        <p className="text-slate-400 text-sm">Vui lòng chọn cơ sở để khởi động thiết bị Hupuna Chấm Công</p>
+        <p className="text-slate-400 text-sm">Vui lòng chọn cơ sở để khởi động thiết bị Chấm công Chấm Công</p>
       </div>
 
       {/* Loading */}
@@ -233,7 +226,7 @@ export default function KioskSelectPage() {
       {/* Footer */}
       <div className="absolute bottom-8 left-0 right-0 flex justify-center z-50 pointer-events-none">
         <p className="text-slate-600 text-xs">
-          Hupuna Chấm Công &bull; Thiết lập thiết bị
+          Chấm công Chấm Công &bull; Thiết lập thiết bị
         </p>
       </div>
     </div>

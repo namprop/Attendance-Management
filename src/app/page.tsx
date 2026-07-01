@@ -14,26 +14,8 @@ export default function HomePage() {
   useEffect(() => {
     if (!loaded) return;
     
-    const user = cookieBase.get<User>("info_user");
-    if (user) {
-      let userRoleVal: unknown = user.role;
-      if (typeof userRoleVal === 'string' && userRoleVal.startsWith('{')) {
-        try { userRoleVal = JSON.parse(userRoleVal); } catch(e) {}
-      }
-      const roleId = typeof userRoleVal === 'object' && userRoleVal !== null ? Number((userRoleVal as Record<string, unknown>).id) : Number(userRoleVal);
-
-      // TODO: Tự viết lại logic check role
-      const isSuperAdmin = true;
-      const hasHrPermission = true;
-
-      if (!isSuperAdmin && !hasHrPermission) {
-        router.replace("/portal/profile");
-      } else {
-        router.replace("/dashboard");
-      }
-    } else {
-      router.replace("/login");
-    }
+    // Bypass auth: Go straight to dashboard
+    router.replace("/dashboard");
   }, [router, loaded]);
   
   return (

@@ -284,7 +284,7 @@ export interface HardwareRow {
 export interface ZktecoDevice {
   _id?: string;
   deviceName: string;
-  connectorUrl: string; // VD: https://hanoi.hupuna.com
+  connectorUrl: string; // VD: https://hanoi.abc.com
   connectorId?: string;
   ipAddress: string;    // VD: 192.168.1.10
   port?: number;

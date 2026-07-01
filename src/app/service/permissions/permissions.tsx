@@ -8,7 +8,7 @@ let _cacheLoaded = false;
 
 /**
  * Gọi qua /api/auth-proxy (same-origin) thay vì cross-origin trực tiếp.
- * Auth-proxy sẽ tự thêm x-api-key khi forward sang hupuna-auth.
+ * Auth-proxy sẽ tự thêm x-api-key khi forward sang abc-auth.
  */
 async function proxyFetch(target: string): Promise<Response> {
     return fetch("/api/auth-proxy", {

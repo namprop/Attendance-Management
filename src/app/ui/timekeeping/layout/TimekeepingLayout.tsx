@@ -3,6 +3,7 @@
 import { startTransition } from 'react';
 
 import React, { useEffect, useState, useCallback } from 'react';
+import { ABCLogo } from '@/app/ui/base/abc-logo';
 import { useRouter, usePathname } from 'next/navigation';
 import { ConfigProvider, Layout, Badge, notification } from 'antd';
 import {
@@ -42,9 +43,9 @@ const MENU_ITEMS = [
   { key: '/contracts/templates', icon: <FileText className="w-4 h-4" />, label: 'Mẫu hợp đồng', permission: 'timekeeping_members', adminOnly: true },
   { key: '/contracts/types', icon: <FileText className="w-4 h-4" />, label: 'Loại hợp đồng', permission: 'timekeeping_members', adminOnly: true },
   { key: '/shifts', icon: <Clock className="w-4 h-4" />, label: 'Ca làm việc', permission: 'timekeeping_shifts', adminOnly: true },
-  { key: '/ai-advisor', icon: <Sparkles className="w-4 h-4" />, label: 'Tính năng AI Hupuna', permission: 'timekeeping_ai_advisor' },
+  { key: '/ai-advisor', icon: <Sparkles className="w-4 h-4" />, label: 'Tính năng AI Chấm công', permission: 'timekeeping_ai_advisor' },
   { key: '/hardware-integration', icon: <Cpu className="w-4 h-4" />, label: 'Tích hợp Máy vân tay', permission: 'timekeeping_hardware', adminOnly: true },
-  { key: '/kiosk-devices', icon: <Tablet className="w-4 h-4" />, label: 'Thiết bị Hupuna Chấm Công', permission: 'timekeeping_kiosk_devices', adminOnly: true },
+  { key: '/kiosk-devices', icon: <Tablet className="w-4 h-4" />, label: 'Thiết bị Chấm công Chấm Công', permission: 'timekeeping_kiosk_devices', adminOnly: true },
   { key: '/zkteco-devices', icon: <Tablet className="w-4 h-4" />, label: 'Quản lý máy ZKTeco', permission: 'timekeeping_kiosk_devices', adminOnly: true },
   { key: '/zkteco-panel', icon: <Cpu className="w-4 h-4" />, label: 'Cổng Connector ZKTeco', permission: 'timekeeping_kiosk_devices', adminOnly: true },
   { key: '/zkteco-devices/employee-sync', icon: <Users className="w-4 h-4" />, label: 'Đồng bộ Connector ZKTeco', permission: 'timekeeping_kiosk_devices', adminOnly: true },
@@ -125,7 +126,7 @@ function MobileDrawer({
               <Monitor className="w-4 h-4 text-white" />
             </div>
             <div>
-              <p className="text-white font-bold text-sm leading-none">Hupuna</p>
+              <p className="text-white font-bold text-sm leading-none">Chấm công</p>
               <p className="text-blue-200 text-[10px] font-medium mt-0.5">Timekeeping HQ</p>
             </div>
           </div>
@@ -229,7 +230,7 @@ function MobileDrawer({
 
         {/* Drawer Footer */}
         <div className="px-4 py-3 border-t border-white/15 shrink-0">
-          <p className="text-blue-200/60 text-[10px] font-medium text-center">Hupuna Timekeeping HQ</p>
+          <p className="text-blue-200/60 text-[10px] font-medium text-center">Chấm công Timekeeping HQ</p>
         </div>
       </div>
     </>
@@ -540,7 +541,7 @@ export default function TimekeepingLayout({ children }: { children: React.ReactN
       icon: <Cpu className="w-4 h-4" />,
       children: [
         { href: '/hardware-integration', label: 'Tích hợp Máy vân tay', icon: <Cpu className="w-4 h-4" /> },
-        { href: '/kiosk-devices', label: 'Thiết bị Hupuna Chấm Công', icon: <Tablet className="w-4 h-4" /> },
+        { href: '/kiosk-devices', label: 'Thiết bị Chấm công Chấm Công', icon: <Tablet className="w-4 h-4" /> },
         { href: '/zkteco-devices', label: 'Quản lý máy ZKTeco', icon: <Tablet className="w-4 h-4" /> },
         { href: '/zkteco-panel', label: 'Cổng Connector ZKTeco', icon: <Cpu className="w-4 h-4" /> },
         { href: '/zkteco-devices/employee-sync', label: 'Đồng bộ Connector ZKTeco', icon: <Users className="w-4 h-4" /> },
@@ -578,12 +579,7 @@ export default function TimekeepingLayout({ children }: { children: React.ReactN
           {/* Logo with glow */}
           <div className="relative">
             <div className="absolute -inset-4 rounded-2xl bg-blue-500/10 blur-2xl animate-pulse" />
-            <img
-              src="/images/hupuna-xanh.png"
-              alt="Hupuna Logo"
-              style={{ height: '48px', width: 'auto', maxWidth: '200px', objectFit: 'contain' }}
-              className="relative z-10 drop-shadow-sm"
-            />
+            <ABCLogo className="text-5xl relative z-10" />
           </div>
 
           {/* Spinner */}
@@ -594,7 +590,7 @@ export default function TimekeepingLayout({ children }: { children: React.ReactN
 
           <div className="text-center">
             <p className="text-[11px] text-slate-400 font-bold uppercase tracking-[0.15em] font-mono">
-              Hupuna Timekeeping
+              Chấm công Timekeeping
             </p>
             <p className="text-xs text-slate-500 mt-1 font-medium">
               Đang khởi động phiên bảo mật...

@@ -105,7 +105,7 @@ const VARIABLE_GROUPS = [
   },
 ];
 
-const HUPUNA_CONTRACT_TEMPLATE = `<table style="width: 100%; border: none; border-collapse: collapse; font-family: 'Times New Roman', serif;">
+const ABC_CONTRACT_TEMPLATE = `<table style="width: 100%; border: none; border-collapse: collapse; font-family: 'Times New Roman', serif;">
   <tbody>
     <tr>
       <td style="width: 45%; text-align: center; vertical-align: top; border: none; padding: 0;">
@@ -349,7 +349,7 @@ export default function ContractTemplatesPage() {
     setEditingId(null);
     form.resetFields();
     form.setFieldsValue({ isActive: true });
-    setHtmlContent(HUPUNA_CONTRACT_TEMPLATE);
+    setHtmlContent(ABC_CONTRACT_TEMPLATE);
     setModalOpen(true);
   }
 
@@ -609,7 +609,7 @@ export default function ContractTemplatesPage() {
             <Form form={form} layout="vertical" className="shrink-0">
               <div className="grid grid-cols-2 gap-3 mb-4">
                 <Form.Item name="templateName" label="Tên mẫu hợp đồng" rules={[{ required: true, message: 'Nhập tên mẫu' }]} className="mb-0">
-                  <Input placeholder="VD: HĐ Lao động Hupuna (Chính thức)" />
+                  <Input placeholder="VD: HĐ Lao động Chấm công (Chính thức)" />
                 </Form.Item>
                 <Form.Item name="isActive" label="Trạng thái" valuePropName="checked" className="mb-0">
                   <Switch checkedChildren="Kích hoạt" unCheckedChildren="Tắt" />
@@ -624,9 +624,9 @@ export default function ContractTemplatesPage() {
                 type="dashed" 
                 icon={<FileText size={12} />} 
                 className="ml-4 text-xs text-blue-600 border-blue-200 bg-blue-50 hover:bg-blue-100"
-                onClick={() => setHtmlContent(HUPUNA_CONTRACT_TEMPLATE)}
+                onClick={() => setHtmlContent(ABC_CONTRACT_TEMPLATE)}
               >
-                Tải Mẫu Hợp đồng chuẩn HUPUNA
+                Tải Mẫu Hợp đồng chuẩn CHẤM CÔNG
               </Button>
             </Divider>
 

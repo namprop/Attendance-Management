@@ -1,6 +1,6 @@
 import { Tooltip } from "antd";
 import React, { useState, useMemo } from "react";
-import DongDauHupuna from "@public/images/dau-hupuna.png";
+import DongDauABC from "@public/images/dau-abc.png";
 import Image from "next/image";
 import { formatVND } from "@/app/utils/converts";
 import { ButtonBase } from "../base/button";
@@ -210,7 +210,7 @@ export default function QuotationPrintVAT({
                 {/* Header */}
                 <div className="text-center">
                     <p className="font-bold uppercase text-lg" style={{ color: "red" }}>
-                        CÔNG TY CỔ PHẦN HUPUNA GROUP
+                        CÔNG TY TNHH CHẤM CÔNG
                     </p>
                     <p className="font-bold text-md">
                         Văn phòng: Ecogreen, 268 Nguyễn Xiển, Tân Triều, Thanh Trì , Hà Nội
@@ -219,7 +219,7 @@ export default function QuotationPrintVAT({
                         Văn phòng HCM: Số 59/1C Ấp Nam Lân, Bà Điểm, Hóc Môn, TP. Hồ Chí Minh.
                     </p>
                     <p className="font-bold text-md">Hotline: 0946.333.891</p>
-                    <p className="font-bold text-md">MST: 0109746861</p>
+                    <p className="font-bold text-md">MST: 0123456789</p>
                 </div>
                 <div className="flex flex-col justify-center items-center">
                     <QRBase
@@ -253,7 +253,7 @@ export default function QuotationPrintVAT({
                     </div>
                 </div>
                 <p className="italic text-justify font-medium">
-                    Công Ty Cổ Phần Hupuna Group trân trọng cảm ơn sự tín nhiệm và hợp tác
+                    Công Ty Cổ Phần Công ty Chấm công trân trọng cảm ơn sự tín nhiệm và hợp tác
                     của quý khách hàng sau khi nghiên cứu chất liệu và quy cách sản phẩm
                     cần in ấn, chúng tôi xin trân trọng cảm ơn và gửi đến quý khách bảng
                     báo giá chi tiết.
@@ -503,7 +503,7 @@ export default function QuotationPrintVAT({
                     style={{ color: "gray", borderColor: "#dedede" }}
                 >
                     <p className="mt-2 italic">
-                        Công ty cổ phần Hupuna Group chuyên sản xuất thùng carton, băng keo,
+                        Công ty cổ phần Công ty Chấm công chuyên sản xuất thùng carton, băng keo,
                         màng PE, xốp nổ, xốp foam theo yêu cầu với giá cạnh tranh.
                     </p>
                     <p className="italic">
@@ -524,7 +524,7 @@ export default function QuotationPrintVAT({
             >
                 <img
                     className="no-select-img"
-                    src={DongDauHupuna.src}
+                    src={DongDauABC.src}
                     alt="stamp"
                     width={180}
                     height={180}

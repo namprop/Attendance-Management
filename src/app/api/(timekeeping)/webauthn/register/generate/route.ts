@@ -6,7 +6,7 @@ import { ObjectId } from 'mongodb';
 
 // RP ID should match your domain. For localhost, use 'localhost'
 const rpID = process.env.NEXT_PUBLIC_WEBAUTHN_RPID || 'localhost';
-const rpName = 'Hupuna Timekeeping';
+const rpName = 'Chấm công Timekeeping';
 
 export async function GET(req: NextRequest) {
   try {

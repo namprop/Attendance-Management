@@ -1,26 +1,26 @@
 import { NextResponse } from 'next/server';
 import { connectToDatabase } from '@/app/lib/monggodb/connectToDatabase';
 
-// POST /api/contract-templates/seed — Tạo mẫu hợp đồng Hupuna chuẩn
+// POST /api/contract-templates/seed — Tạo mẫu hợp đồng Chấm công chuẩn
 export async function POST() {
   try {
     const { db } = await connectToDatabase();
 
     // Kiểm tra đã có chưa để tránh duplicate
     const existing = await db.collection('contract_templates').findOne({
-      templateName: { $regex: 'Hupuna', $options: 'i' }
+      templateName: { $regex: 'Chấm công', $options: 'i' }
     });
 
     if (existing) {
       return NextResponse.json({
         success: false,
-        message: 'Mẫu hợp đồng Hupuna đã tồn tại trong hệ thống',
+        message: 'Mẫu hợp đồng Chấm công đã tồn tại trong hệ thống',
       }, { status: 409 });
     }
 
     const templates = [
       {
-        templateName: 'Hợp đồng Lao động Hupuna (Chính thức)',
+        templateName: 'Hợp đồng Lao động Chấm công (Chính thức)',
         contractType: 'full_time',
         isActive: true,
         sections: [
@@ -30,7 +30,7 @@ export async function POST() {
               '1. Loại HĐLĐ: Có thời hạn\n' +
               '2. Thời hạn HĐLĐ: {{duration}}\n' +
               '3. Thời điểm từ: Ngày {{start_day}} tháng {{start_month}} năm {{start_year}} đến ngày {{end_day}} tháng {{end_month}} năm {{end_year}}\n' +
-              '4. Địa điểm làm việc: Tại CÔNG TY CỔ PHẦN HUPUNA GROUP - 286 Nguyễn Xiển,Tân Triều,Thanh Trì,Hà Nội\n' +
+              '4. Địa điểm làm việc: Tại CÔNG TY TNHH CHẤM CÔNG - Hà Nội, Việt Nam\n' +
               '5. Bộ phận công tác: {{department}}\n' +
               ' Chức vụ: {{role}}\n' +
               '6. Nhiệm vụ công việc như sau:\n' +
@@ -150,7 +150,7 @@ export async function POST() {
               'Hợp đồng lao động có đính kèm nội quy lao động có giá trị như hợp đồng lao động này.\n' +
               'Người lao động vi phạm những Điều 1, Điều 2, Điều 3 và Điều 5 trong hợp đồng lao động sẽ phải chịu theo Điều 5: Bồi thường vi phạm vật chất và tài sản đối với người lao động.\n' +
               'Người lao động vi phạm hợp đồng lao động, vi phạm pháp luật tự chịu trách nhiệm trước pháp luật.\n' +
-              'Hợp đồng này lập tại: 286 Nguyễn Xiển, Tân Triều, Thanh Trì,Hà Nội ngày {{day}} tháng {{month}} năm {{year}}'
+              'Hợp đồng này lập tại: Hà Nội, Tân Triều, Thanh Trì,Hà Nội ngày {{day}} tháng {{month}} năm {{year}}'
           }
         ],
         createdAt: new Date(),
@@ -162,7 +162,7 @@ export async function POST() {
 
     return NextResponse.json({
       success: true,
-      message: `Đã tạo ${templates.length} mẫu hợp đồng Hupuna thành công`,
+      message: `Đã tạo ${templates.length} mẫu hợp đồng Chấm công thành công`,
       data: templates.map(t => ({ templateName: t.templateName, contractType: t.contractType })),
     });
 

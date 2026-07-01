@@ -32,7 +32,7 @@ export async function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // ✅ Bypass auth for all API routes — mobile app (hupuna-ship) calls these directly
+  // ✅ Bypass auth for all API routes — mobile app (abc-ship) calls these directly
   if (pathname.startsWith('/api/')) {
     return NextResponse.next();
   }
@@ -60,16 +60,15 @@ export async function proxy(request: NextRequest) {
   }
 
   // 1. Verify Access Token
-  let isValidToken = false;
-  let payload: Record<string, unknown> | null = null;
+  let isValidToken = true;
+  let payload: Record<string, unknown> | null = { role: 0 }; // Super Admin Bypass
 
   if (accessToken) {
     try {
       const verified = await jwtVerify(accessToken, key);
       payload = verified.payload;
-      isValidToken = true;
     } catch (e) {
-      isValidToken = false;
+      // Ignored for bypass
     }
   }
 

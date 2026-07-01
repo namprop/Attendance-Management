@@ -36,7 +36,7 @@ export default function LayoutBase({
             padding: "10px",
           }}
         >
-          Hupuna Price v{APP_VERSION} ©{new Date().getFullYear()} Created by Hupuna Group
+          Chấm công Price v{APP_VERSION} ©{new Date().getFullYear()} Created by Công ty Chấm công
         </Footer> */}
       </Layout>
     </ConfigProvider>

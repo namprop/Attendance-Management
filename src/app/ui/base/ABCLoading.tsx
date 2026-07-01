@@ -1,6 +1,5 @@
 import React from 'react';
-
-export const HupunaLoading = () => {
+import { ABCLogo } from './abc-logo';export const ABCLoading = () => {
   return (
     <div className="w-full h-full min-h-[60vh] flex flex-col items-center justify-center bg-transparent opacity-0 animate-[fadeIn_0.5s_ease-in-out_forwards]">
       {/* Brand Icon Pulse */}
@@ -14,13 +13,13 @@ export const HupunaLoading = () => {
         
         {/* Center Logo */}
         <div className="bg-white w-12 h-12 rounded-full flex items-center justify-center shadow-sm z-10 p-2">
-          <img src="/images/hupuna-xanh.png" alt="Hupuna" className="w-full h-full object-contain animate-pulse" />
+          <ABCLogo className="text-[14px] animate-pulse" />
         </div>
       </div>
       
       {/* Brand Text */}
       <span className="text-[11px] text-blue-600 font-extrabold uppercase tracking-[0.2em] font-mono mb-1.5 animate-pulse">
-        Hupuna Timekeeping HQ
+        Chấm công Timekeeping HQ
       </span>
       <span className="text-xs text-slate-500 font-medium">
         Đang nạp dữ liệu hệ thống...

@@ -124,7 +124,7 @@ export const ContractA4Preview = ({
     );
   }
 
-  // ── Fallback: Render sections cũ (định dạng cứng Hupuna) ──────────────────
+  // ── Fallback: Render sections cũ (định dạng cứng Chấm công) ──────────────────
   return (
     <div className="flex justify-center p-6" style={{ background: '#e5e7eb', minHeight: '100%' }}>
       <div
@@ -145,9 +145,9 @@ export const ContractA4Preview = ({
         {/* QUỐC HIỆU TIÊU NGỮ */}
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px', fontSize: '12pt' }}>
           <div style={{ textAlign: 'center', width: '40%' }}>
-            <p style={{ fontWeight: 'bold', margin: '0' }}>CÔNG TY CỔ PHẦN</p>
-            <p style={{ fontWeight: 'bold', margin: '0' }}>HUPUNA GROUP</p>
-            <p style={{ margin: '0' }}>Số: {renderTemplateText('{{contract_number}}', employee)} /HDLD-HPN</p>
+            <p style={{ fontWeight: 'bold', margin: '0' }}>CÔNG TY TNHH</p>
+            <p style={{ fontWeight: 'bold', margin: '0' }}>CHẤM CÔNG</p>
+            <p style={{ margin: '0' }}>Số: {renderTemplateText('{{contract_number}}', employee)} /HDLD</p>
           </div>
           <div style={{ textAlign: 'center', width: '60%' }}>
             <p style={{ fontWeight: 'bold', margin: '0' }}>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</p>
@@ -162,7 +162,7 @@ export const ContractA4Preview = ({
         <div style={{ textAlign: 'center', margin: '16px 0 20px' }}>
           <p style={{ fontSize: '16pt', fontWeight: 'bold', margin: '0' }}>HỢP ĐỒNG LAO ĐỘNG</p>
           <p style={{ fontSize: '12pt', margin: '0', fontStyle: 'italic' }}>
-            (Số: {renderTemplateText('{{contract_number}}', employee)}/{renderTemplateText('{{year}}', employee)}/HĐLĐ/CÔNG TY CỔ PHẦN HUPUNA GROUP)
+            (Số: {renderTemplateText('{{contract_number}}', employee)}/{renderTemplateText('{{year}}', employee)}/HĐLĐ/CÔNG TY)
           </p>
         </div>
 
@@ -176,10 +176,10 @@ export const ContractA4Preview = ({
         {/* THÔNG TIN HAI BÊN */}
         <div style={{ marginBottom: '16px', fontSize: '12pt', textAlign: 'justify' }}>
           <p style={{ margin: '4px 0' }}>
-            Hôm nay, ngày {renderTemplateText('{{day}}', employee)} tháng {renderTemplateText('{{month}}', employee)} năm {renderTemplateText('{{year}}', employee)}, tại CÔNG TY CỔ PHẦN HUPUNA GROUP, chúng tôi gồm:
+            Hôm nay, ngày {renderTemplateText('{{day}}', employee)} tháng {renderTemplateText('{{month}}', employee)} năm {renderTemplateText('{{year}}', employee)}, tại CÔNG TY, chúng tôi gồm:
           </p>
           <div style={{ marginTop: '8px' }}>
-            <p><strong>Bên A:</strong> CÔNG TY CỔ PHẦN HUPUNA GROUP</p>
+            <p><strong>Bên A:</strong> CÔNG TY</p>
             <p><strong>Bên B:</strong> {renderTemplateText('{{full_name}}', employee)}</p>
             <p>Ngày sinh: {renderTemplateText('{{dob}}', employee)}</p>
             <p>Địa chỉ: {renderTemplateText('{{address}}', employee)}</p>
@@ -213,7 +213,7 @@ export const ContractA4Preview = ({
             <p style={{ margin: '0' }}>ĐẠI DIỆN CỦA CÔNG TY</p>
             <p style={{ fontStyle: 'italic', fontWeight: 'normal', fontSize: '11pt', margin: '2px 0' }}>(Ký, ghi họ tên và đóng dấu)</p>
             <div style={{ height: '80px' }}></div>
-            <p style={{ margin: '0' }}>NGUYỄN TIẾN HUY</p>
+            <p style={{ margin: '0' }}>ĐẠI DIỆN CÔNG TY</p>
           </div>
         </div>
       </div>

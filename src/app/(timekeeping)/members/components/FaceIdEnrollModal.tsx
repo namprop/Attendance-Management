@@ -671,7 +671,7 @@ export const FaceIdEnrollModal: React.FC<FaceIdEnrollModalProps> = ({
       <div className="bg-white -m-5 p-6 text-slate-800 pb-8 rounded-2xl font-sans transition-all duration-500">
         <div className="text-center mb-6">
           <span className="text-[10px] bg-blue-50 border border-blue-200 text-blue-600 font-extrabold px-3 py-1 rounded-full uppercase tracking-wider font-mono">
-            Hupuna Bio-Scanner
+            Chấm công Bio-Scanner
           </span>
           <h4 className="text-xl font-black mt-3 text-slate-800 tracking-tight">Thiết Lập Face ID Của Nhân Sự</h4>
           {targetEmp && (

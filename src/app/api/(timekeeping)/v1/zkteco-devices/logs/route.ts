@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { requirePermission } from '@/lib/auth-guard';
 
-const apiKey = () => process.env.HARDWARE_WEBHOOK_SECRET || 'HUPUNA_2026_SECURE_KEY';
+const apiKey = () => process.env.HARDWARE_WEBHOOK_SECRET || 'ABC_2026_SECURE_KEY';
 
 async function fetchWithTimeout(url: string, options: RequestInit, timeoutMs: number) {
   const controller = new AbortController();
@@ -80,7 +80,7 @@ export async function DELETE(req: NextRequest) {
 
     const res = await fetchWithTimeout(actionUrl.toString(), {
       method: 'DELETE',
-      headers: { 'x-api-key': process.env.HARDWARE_WEBHOOK_SECRET || 'HUPUNA_2026_SECURE_KEY' },
+      headers: { 'x-api-key': process.env.HARDWARE_WEBHOOK_SECRET || 'ABC_2026_SECURE_KEY' },
     }, 30_000);
     const data = await res.json();
     return NextResponse.json(data, { status: res.status });

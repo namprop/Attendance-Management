@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     }   
 
     // Call Connector API
-    const apiKey = process.env.HARDWARE_WEBHOOK_SECRET || 'HUPUNA_2026_SECURE_KEY';
+    const apiKey = process.env.HARDWARE_WEBHOOK_SECRET || 'ABC_2026_SECURE_KEY';
     const res = await fetch(`${connector.connectorUrl}/api/zkteco/local-devices`, {
       headers: {
         'x-api-key': apiKey,

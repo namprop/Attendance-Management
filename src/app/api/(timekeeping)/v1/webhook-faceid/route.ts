@@ -101,7 +101,7 @@ export async function POST(req: Request) {
   try {
     // 1. Xác thực bảo mật Token
     const authHeader = req.headers.get('authorization') || req.headers.get('x-api-key') || req.headers.get('token');
-    const expectedToken = process.env.HARDWARE_WEBHOOK_SECRET || 'HUPUNA_2026_SECURE_KEY';
+    const expectedToken = process.env.HARDWARE_WEBHOOK_SECRET || 'ABC_2026_SECURE_KEY';
     
     if (authHeader?.replace('Bearer ', '') !== expectedToken) {
       return NextResponse.json({ success: false, message: 'Từ chối truy cập. Token không hợp lệ hoặc thiếu Token.' }, { status: 401 });

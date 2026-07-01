@@ -33,7 +33,7 @@ export function FormPrint({ children, btnContent, btnClassName, disabled }: Form
     doc.write(`
       <html>
         <head>
-          <title>Hupuna - Giải pháp đóng gói hàng thông minh</title>
+          <title>Chấm công - Giải pháp đóng gói hàng thông minh</title>
           <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/antd@5.25.1/dist/antd.min.css" />
           <style>

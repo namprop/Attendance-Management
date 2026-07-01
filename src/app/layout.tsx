@@ -22,10 +22,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Chấm Công Hupuna",
-  description: "Hệ thống quản lý chấm công Hupuna HQ",
+  title: "Chấm Công Chấm công",
+  description: "Hệ thống quản lý chấm công Chấm công HQ",
   icons: {
-    icon: "/images/hupuna-xanh.png?v=2",
+    icon: "/images/abc-xanh.png?v=2",
   },
 };
 
@@ -46,7 +46,7 @@ export default function RootLayout({
     <html lang="vi" suppressHydrationWarning className={inter.variable}>
       <head>
         <meta name="robots" content="noindex, nofollow" />
-        <link rel="icon" href="/images/hupuna-xanh.png?v=2" type="image/png" />
+        <link rel="icon" href="/images/abc-xanh.png?v=2" type="image/png" />
       </head>
       <body className={`${inter.className} antialiased`}>
         <AppProviders>{children}</AppProviders>

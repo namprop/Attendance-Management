@@ -9,7 +9,8 @@ import { detectBlink, isPhoneLikeImage, isReplayAttack, detectMouthOpen, isFlatS
 import PhoneSpoofModal from "./components/PhoneSpoofModal";
 import { useDepthModel } from "./helpers/useDepthModel";
 import { Camera, CheckCircle2, ShieldAlert, Loader2, MapPin, ShieldCheck, Users, Scan, Brain, LogOut } from "lucide-react";
-import Image from "next/image";
+import { CONFIG } from '@/app/utils/config';
+import { ABCLogo } from '@/app/ui/base/abc-logo';
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -982,17 +983,10 @@ export default function FaceScanner({ locationSlug, deviceInfo, deviceToken }: F
       {/* Horizontal Status Bar - Thanh trạng thái hàng ngang siêu tối ưu */}
       <div className="w-full flex flex-row items-center justify-between py-1.5 px-3 sm:px-4 mb-2 bg-slate-950/45 backdrop-blur-md rounded-2xl border border-white/5 shadow-lg gap-4 shrink-0">
 
-        {/* Cột Trái: Logo Hupuna & Badge Địa điểm */}
+        {/* Cột Trái: Logo Chấm công & Badge Địa điểm */}
         <div className="flex items-center gap-2 sm:gap-3 min-w-0">
           <Link href={`${process.env.NEXT_PUBLIC_TIMEKEEPING_URL_DEV}/kiosk/`}>
-            <Image
-              src="/images/hupuna-xanh.png"
-              alt="Hupuna Logo"
-              width={85}
-              height={25}
-              className="opacity-95 shrink-0 object-contain"
-              priority
-            />
+            <ABCLogo className="text-2xl sm:text-3xl opacity-95 shrink-0" />
           </Link>
           <div className="h-4 w-px bg-slate-700/60 shrink-0" />
 
@@ -1060,7 +1054,7 @@ export default function FaceScanner({ locationSlug, deviceInfo, deviceToken }: F
             "border-slate-800 shadow-[0_0_40px_rgba(59,130,246,0.05)]"
         }`}>
 
-        {/* Lớp Overlay Gradient Hupuna Blue cho góc quay */}
+        {/* Lớp Overlay Gradient Chấm công Blue cho góc quay */}
         <div className="absolute inset-0 bg-linear-to-tr from-blue-900/15 to-transparent z-10 pointer-events-none mix-blend-overlay"></div>
 
         <video
@@ -1358,7 +1352,7 @@ export default function FaceScanner({ locationSlug, deviceInfo, deviceToken }: F
               }`}>
               {status === "SUCCESS" && employeeData ? `CHÀO, ${employeeData.fullName.toUpperCase()}` :
                 status === "ERROR" ? "CHẤM CÔNG THẤT BẠI" :
-                  "HUPUNA TIMEKEEPING"}
+                  "CHẤM CÔNG TIMEKEEPING"}
             </h3>
             <p className={`font-semibold text-sm sm:text-base leading-snug ${status === "SUCCESS" ? "text-emerald-200" :
               status === "ERROR" ? "text-red-200" :

@@ -104,7 +104,7 @@ export function QrCardContent({
         {/* Lanyard hole */}
         <div className="w-12 h-2.5 bg-white/30 rounded-full mx-auto mb-3 backdrop-blur-sm border border-white/20" />
         <p className="text-white font-black text-xl tracking-[0.25em] uppercase text-center drop-shadow-sm">
-          HUPUNA
+          CHẤM CÔNG
         </p>
       </div>
 
@@ -164,7 +164,7 @@ export function QrCardContent({
         {/* QR column */}
         <div className="flex flex-col items-center justify-center bg-white border border-slate-100 rounded-xl p-2 shadow-sm shrink-0">
           <QRCode
-            value={`HUPUNA_EMP_ID:${empId}`}
+            value={`ABC_EMP_ID:${empId}`}
             size={108}
             color="#0f172a"
             bordered={false}

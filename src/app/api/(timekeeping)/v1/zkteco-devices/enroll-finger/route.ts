@@ -68,7 +68,7 @@ export async function POST(req: NextRequest) {
         'Content-Type': 'application/json',
         'x-connector-id': connector._id.toString(),
         'x-target-ip': device.ipAddress || device.ip,
-        'x-api-key': process.env.HARDWARE_WEBHOOK_SECRET || 'HUPUNA_2026_SECURE_KEY'
+        'x-api-key': process.env.HARDWARE_WEBHOOK_SECRET || 'ABC_2026_SECURE_KEY'
       },
       body: JSON.stringify(payload)
     });

@@ -179,7 +179,7 @@ export default function OrganizationSidebar({ branches, locations, groups, depar
         title: (
           <div className="flex items-center gap-2 py-1">
             <Building2 className="w-4 h-4 text-slate-800" />
-            <span className="text-sm font-bold text-slate-800">Công ty Cổ phần Hupuna</span>
+            <span className="text-sm font-bold text-slate-800">Công ty Cổ phần Chấm công</span>
           </div>
         ),
         key: 'company-root',

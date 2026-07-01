@@ -147,7 +147,7 @@ export default function ClockPanelWidget({
           </span>
           <h2 className="text-xl font-bold text-slate-800 mt-1 flex items-center gap-1.5">
             <Clock className="w-5 h-5 text-slate-500" />
-            Văn Phòng Hupuna
+            Văn Phòng Chấm công
           </h2>
         </div>
         <div id="ticker_clock" className="text-right flex items-center gap-3">
@@ -364,7 +364,7 @@ export default function ClockPanelWidget({
               <div className="bg-white p-3 rounded-xl border border-slate-200/50 shadow-xs">
                 <div className="flex justify-between items-start mb-2">
                   <div>
-                    <span className="text-[10px] text-slate-400 block font-mono">KHOẢNG CÁCH HQ HUPUNA</span>
+                    <span className="text-[10px] text-slate-400 block font-mono">KHOẢNG CÁCH HQ CHẤM CÔNG</span>
                     <span className="text-xs font-mono font-bold text-slate-800">
                       {distance !== null ? `${distance} mét` : 'Chưa định vị'}
                     </span>

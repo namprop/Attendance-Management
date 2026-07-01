@@ -225,13 +225,13 @@ export default function ContractFillPage({ params }: { params: Promise<{ templat
         start_month: join ? join.format('MM') : '',
         start_year: join ? join.format('YYYY') : '',
         // --- Company Info Defaults ---
-        company_name: 'CÔNG TY CỔ PHẦN HUPUNA GROUP',
-        company_short_name: 'HUPUNA GROUP',
-        company_address: '286 Nguyễn Xiển, Tân Triều, Thanh Trì, Hà Nội',
-        company_tax_code: '0109746861',
-        company_representative: 'NGUYỄN TIẾN HUY',
-        company_role: 'Tổng giám đốc',
-        company_phone: '0379669666',
+        company_name: '',
+        company_short_name: '',
+        company_address: '',
+        company_tax_code: '',
+        company_representative: '',
+        company_role: '',
+        company_phone: '',
       }));
 
       if (join && !contractStartDate) {

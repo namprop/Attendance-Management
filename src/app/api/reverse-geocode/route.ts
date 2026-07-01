@@ -13,7 +13,7 @@ export async function GET(req: NextRequest) {
     const response = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`, {
       headers: {
         "Accept-Language": "vi-VN,vi;q=0.9",
-        "User-Agent": "HupunaInvoiceApp-Proxy/1.0",
+        "User-Agent": "ABCInvoiceApp-Proxy/1.0",
       },
     });
 

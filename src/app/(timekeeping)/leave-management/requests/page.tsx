@@ -73,7 +73,7 @@ function A4LeaveForm({ record, leaveTypes }: A4LeaveFormProps) {
       <div style={{ marginBottom: 16, display: 'flex' }}>
         <div style={{ whiteSpace: 'nowrap', marginRight: 16 }}>Kính gửi</div>
         <div>
-          <div>– Ban Giám Đốc Công Ty: <span style={{ fontWeight: 700 }}>HUPUNA GROUP</span></div>
+          <div>– Ban Giám Đốc Công Ty: <span style={{ fontWeight: 700 }}>CÔNG TY CHẤM CÔNG</span></div>
           <div>– Phòng Hành chính – Nhân sự</div>
         </div>
       </div>

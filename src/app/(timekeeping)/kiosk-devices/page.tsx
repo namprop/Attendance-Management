@@ -733,7 +733,7 @@ export default function KioskDevicesPage() {
             Quản Lý Thiết Bị
           </span>
           <h2 className="text-xl font-bold mt-2.5 mb-1.5 text-slate-800">
-            Thiết Bị Hupuna Chấm Công
+            Thiết Bị Chấm công Chấm Công
           </h2>
           <p className="text-xs text-slate-500 leading-relaxed">
             Đăng ký và quản lý các thiết bị chấm công tại cơ sở. Mỗi thiết bị được xác thực qua địa chỉ IP tĩnh trước khi cho phép nhân viên chấm công.

@@ -206,7 +206,7 @@ export default function AppsMenu() {
                 >
                     {/* Panel header */}
                     <div className="flex items-center justify-between px-5 py-3 border-b border-gray-100 bg-linear-to-rm-blue-50/50 to-transparent shrink-0">
-                        <h2 className="text-sm font-bold text-gray-800">Ứng dụng Hupuna</h2>
+                        <h2 className="text-sm font-bold text-gray-800">Ứng dụng Chấm công</h2>
                         <a href={`${URLS.AUTH}/dashboard`} className="text-xs text-blue-600 hover:text-blue-700 font-medium hover:underline">
                             Xem tất cả →
                         </a>
@@ -245,7 +245,7 @@ export default function AppsMenu() {
                     </div>
                     {/* Sheet header */}
                     <div className="flex items-center justify-between px-5 py-2 border-b border-gray-100 shrink-0">
-                        <h2 className="text-sm font-bold text-gray-800">Ứng dụng Hupuna</h2>
+                        <h2 className="text-sm font-bold text-gray-800">Ứng dụng Chấm công</h2>
                         <button type="button" onClick={() => setIsOpen(false)} className="p-1 rounded-full hover:bg-gray-100">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6B7280" strokeWidth="2" strokeLinecap="round">
                                 <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />

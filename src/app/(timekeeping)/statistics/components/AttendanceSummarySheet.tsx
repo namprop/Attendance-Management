@@ -945,7 +945,7 @@ export default function AttendanceSummarySheet({
     const yearRow = worksheet.addRow(['Năm', year]);
     worksheet.mergeCells(yearRow.number, 2, yearRow.number, totalSheetColumns);
 
-    const dayHeaderRow = worksheet.addRow(['HUPUNA GROUP', '', '', ...summaryDays.map((day) => day.day), 'Tổng cộng', 'Ghi chú']);
+    const dayHeaderRow = worksheet.addRow(['CÔNG TY CHẤM CÔNG', '', '', ...summaryDays.map((day) => day.day), 'Tổng cộng', 'Ghi chú']);
     worksheet.mergeCells(dayHeaderRow.number, 1, dayHeaderRow.number, 3);
 
     worksheet.addRow(['STT', 'Họ và tên', 'Loại', ...summaryDays.map((day) => day.weekday), '', '']);
@@ -1119,7 +1119,7 @@ export default function AttendanceSummarySheet({
                 </tr>
                 <tr className="bg-gray-50 text-gray-700">
                   <th className={`${cellClass} bg-gray-50 text-left font-bold uppercase tracking-wide`} colSpan={3}>
-                    HUPUNA GROUP
+                    CÔNG TY CHẤM CÔNG
                   </th>
                   {summaryDays.map((day) => (
                     <th

@@ -1777,8 +1777,8 @@ export default function MembersPage() {
         open={showQRScanner}
         onClose={() => setShowQRScanner(false)}
         onScanSuccess={(decodedText) => {
-          if (decodedText.startsWith('HUPUNA_EMP_ID:')) {
-            const empId = decodedText.split('HUPUNA_EMP_ID:')[1];
+          if (decodedText.startsWith('ABC_EMP_ID:')) {
+            const empId = decodedText.split('ABC_EMP_ID:')[1];
             const emp = employees.find(e => e.id === empId || e._id === empId);
             if (emp) {
               handleOpenDetail(emp);

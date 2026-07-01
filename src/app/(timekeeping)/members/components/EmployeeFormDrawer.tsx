@@ -687,7 +687,7 @@ export const EmployeeFormDrawer: React.FC<EmployeeFormDrawerProps> = ({
                         }
                       ]}
                     >
-                      <Input placeholder="Ví dụ: hotro@hupuna.com" className="rounded-lg h-9 font-mono" type="email" />
+                      <Input placeholder="Ví dụ: hotro@abc.com" className="rounded-lg h-9 font-mono" type="email" />
                     </Form.Item>
                   </Col>
 

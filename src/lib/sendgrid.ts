@@ -29,11 +29,11 @@ export const sendEmail = async ({ to, subject, reactElement }: EmailPayload) => 
       to,
       from: {
         email: FROM_EMAIL,
-        name: 'Hupuna Group HRNS'
+        name: 'Công ty Chấm công HRNS'
       },
       replyTo: {
         email: FROM_EMAIL, // Đảm bảo email phản hồi là hợp lệ giúp chống spam
-        name: 'Hupuna Group HRNS'
+        name: 'Công ty Chấm công HRNS'
       },
       subject,
       html,

@@ -260,7 +260,7 @@ export async function PUT(req: NextRequest, { params }: RouteContext) {
               location: authLocation, // Đồng bộ location
               department: authDepartment, // Đồng bộ bộ phận
               typeAccount: "individuals", // Mặc định loại tài khoản là cá nhân
-              company: "Hupuna Group", // Mặc định công ty là Hupuna Group
+              company: "Công ty Chấm công", // Mặc định công ty là Công ty Chấm công
               level: 0, // Mặc định cấp tài khoản là Thường
               cash: 0, // Mặc định số dư là 0
               bankAccount: [], // Mặc định danh sách tài khoản ngân hàng rỗng
@@ -281,7 +281,7 @@ export async function PUT(req: NextRequest, { params }: RouteContext) {
             });
             await sendEmail({
               to: email,
-              subject: 'Thông tin tài khoản Hupuna Workspace',
+              subject: 'Thông tin tài khoản Chấm công Workspace',
               reactElement: reactElement as React.ReactElement
             });
             console.log('Đã gửi email thông báo tài khoản tới', email);
@@ -410,7 +410,7 @@ export async function DELETE(req: NextRequest, { params }: RouteContext) {
                     'Content-Type': 'application/json',
                     'x-connector-id': connector._id.toString(),
                     'x-target-ip': deviceIp,
-                    'x-api-key': process.env.HARDWARE_WEBHOOK_SECRET || 'HUPUNA_2026_SECURE_KEY'
+                    'x-api-key': process.env.HARDWARE_WEBHOOK_SECRET || 'ABC_2026_SECURE_KEY'
                   },
                   body: JSON.stringify({
                     action: 'delete_user',

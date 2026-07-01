@@ -1,5 +1,5 @@
-import { HupunaLoading } from '@/app/ui/base/HupunaLoading';
+import { ABCLoading } from '@/app/ui/base/ABCLoading';
 
 export default function Loading() {
-  return <HupunaLoading />;
+  return <ABCLoading />;
 }

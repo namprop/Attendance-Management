@@ -155,13 +155,13 @@ export const MonthlyPayslipEmail = ({
             {/* Footer */}
             <Section className="text-center">
               <Link
-                href="https://hupuna.com"
+                href="https://abc.com"
                 className="bg-[#2563EB] text-white font-medium px-8 py-4 rounded-xl text-[14px] inline-block no-underline shadow-sm"
               >
                 📊 Xem chi tiết phiếu lương
               </Link>
               <Text className="text-[13px] font-semibold text-slate-700 mt-8 mb-2">
-                Hệ thống Quản lý Nhân sự Hupuna
+                Hệ thống Quản lý Nhân sự Chấm công
               </Text>
               <Text className="text-[12px] text-slate-400 mt-1 mb-0">
                 Email được gửi tự động từ hệ thống.
@@ -170,7 +170,7 @@ export const MonthlyPayslipEmail = ({
                 Vui lòng không trả lời email này.
               </Text>
               <Text className="text-[11px] text-slate-300 mt-4 m-0">
-                © 2026 Hupuna Group
+                © 2026 Công ty Chấm công
               </Text>
             </Section>
             </Section>

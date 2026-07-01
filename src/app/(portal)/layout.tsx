@@ -16,7 +16,7 @@ import IconTriangleDownWhite from '@public/icons/triangle-down.svg';
 import IconUser from '@public/icons/prices/user-black.svg';
 import IconLogout from '@public/icons/logout.svg';
 import Image from 'next/image';
-import LogoXanh from "@public/images/hupuna-xanh.png";
+import { ABCLogo } from "@/app/ui/base/abc-logo";
 import { getCachedDepartments } from "@/app/service/permissions/permissions";
 import { cookieBase } from "@/app/utils/cookie";
 import type { User } from "@/app/data/dataUser";
@@ -126,13 +126,9 @@ function PortalLayoutInner({ children }: { children: React.ReactNode }) {
               {/* Brand Logo */}
               <div className="px-4">
                 <div className="flex flex-col items-center justify-center text-center">
-                  <img
-                    src="/images/hupuna-xanh.png"
-                    alt="Hupuna Logo"
-                    className="h-7 w-auto object-contain shrink-0"
-                  />
+                  <ABCLogo className="text-3xl" />
                   <span className="text-[10px] relative bottom-5 text-slate-400 uppercase tracking-widest font-extrabold mt-1.5 block">
-                    HUPUNA PORTAL
+                    CHẤM CÔNG PORTAL
                   </span>
                 </div>
                 <div className="h-px bg-slate-100 w-full" />
@@ -223,7 +219,7 @@ function PortalLayoutInner({ children }: { children: React.ReactNode }) {
               />
               <AppsMenu />
               <Link href="/dashboard" className="hidden sm:block ml-1">
-                <img src={LogoXanh.src} alt="Logo" className="h-auto w-[70px] sm:w-[90px] flex-none" />
+                <ABCLogo className="text-2xl sm:text-3xl flex-none" />
               </Link>
               <div className="flex flex-col justify-center ml-1 sm:ml-2 border-l border-slate-300 pl-2 sm:pl-3">
                 <h1 className="text-xs sm:text-sm font-extrabold text-slate-800 flex items-center gap-1.5 m-0 leading-normal truncate">

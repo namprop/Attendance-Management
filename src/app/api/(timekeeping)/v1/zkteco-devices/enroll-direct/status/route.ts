@@ -1,6 +1,6 @@
 export const dynamic = 'force-dynamic';
 
-const apiKey = () => process.env.HARDWARE_WEBHOOK_SECRET || 'HUPUNA_2026_SECURE_KEY';
+const apiKey = () => process.env.HARDWARE_WEBHOOK_SECRET || 'ABC_2026_SECURE_KEY';
 
 // GET SSE: proxy stream trạng thái enroll vân tay từ connector về browser
 export async function GET(req: Request) {

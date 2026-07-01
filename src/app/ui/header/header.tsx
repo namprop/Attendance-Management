@@ -5,8 +5,8 @@ import { DropdownBase } from "../base/dropdown";
 import IconTriangleDownWhite from "@public/icons/triangle-down.svg";
 import IconLogout from "@public/icons/logout.svg";
 import IconUser from "@public/icons/prices/user-black.svg";
-import LogoXanh from "@public/images/hupuna-xanh.png";
 import Image from "next/image";
+import { ABCLogo } from "@/app/ui/base/abc-logo";
 import { cookieBase } from "@/app/utils/cookie";
 import Link from "next/link";
 import { User } from "@/app/data/dataUser";
@@ -80,13 +80,7 @@ export default function HeaderBase({
           )}
 
           <Link href="/dashboard" className="flex items-center shrink-0">
-            <img
-              width={100}
-              height={100}
-              src={LogoXanh.src}
-              alt="Hupuna Logo"
-              className="h-auto w-[72px] sm:w-[90px]"
-            />
+            <ABCLogo className="text-2xl sm:text-3xl" />
           </Link>
         </div>
 

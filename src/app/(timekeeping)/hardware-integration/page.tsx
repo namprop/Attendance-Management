@@ -211,7 +211,7 @@ export default function HardwareIntegrationPage() {
               <div className="p-3 bg-slate-50 border border-slate-100 rounded-lg">
                 <h4 className="font-bold text-slate-800 m-0 text-xs">Kết nối API LAN Agent</h4>
                 <p className="text-[11px] text-slate-500 mt-1 mb-0 leading-normal">
-                  Sử dụng mã agent chạy nền liên tục lắng nghe giao thức TCP 4370 của Máy vân tay nội bộ để tự động cập nhật báo cáo lên Hupuna.
+                  Sử dụng mã agent chạy nền liên tục lắng nghe giao thức TCP 4370 của Máy vân tay nội bộ để tự động cập nhật báo cáo lên Chấm công.
                 </p>
               </div>
             </div>

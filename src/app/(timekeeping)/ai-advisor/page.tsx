@@ -25,7 +25,7 @@ export default function AIAdvisorPage() {
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
     {
       sender: 'ai',
-      text: 'Xin chào! Tôi là Trợ lý AI Hupuna. Tôi có thể phân tích chấm công nhân sự, gợi ý tối ưu và cùng bạn thảo luận phát triển dự án hupuna-timekeeping. Hãy hỏi tôi bất cứ điều gì!',
+      text: 'Xin chào! Tôi là Trợ lý AI Chấm công. Tôi có thể phân tích chấm công nhân sự, gợi ý tối ưu và cùng bạn thảo luận phát triển dự án abc-timekeeping. Hãy hỏi tôi bất cứ điều gì!',
       timestamp: new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' }),
     },
   ]);
@@ -173,7 +173,7 @@ export default function AIAdvisorPage() {
               <div className="mb-3">
                 <div className="flex items-center gap-2 mb-1.5">
                   <HelpCircle className="w-4 h-4 text-blue-500" />
-                  <span className="font-bold text-xs uppercase text-slate-500 tracking-wider">Trợ lý Sáng Tạo Phát Triển Hupuna</span>
+                  <span className="font-bold text-xs uppercase text-slate-500 tracking-wider">Trợ lý Sáng Tạo Phát Triển Chấm công</span>
                 </div>
                 <p className="text-[11px] text-slate-400 m-0">Trao đổi và cùng thảo luận sáng kiến nâng cấp mô hình chấm công.</p>
               </div>

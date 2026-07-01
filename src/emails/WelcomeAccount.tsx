@@ -33,7 +33,7 @@ export const WelcomeAccountEmail = ({
     <Tailwind>
       <Html>
         <Head />
-        <Preview>Chào mừng bạn gia nhập hệ thống Hupuna</Preview>
+        <Preview>Chào mừng bạn gia nhập hệ thống Chấm công</Preview>
         <Body className="bg-slate-50 my-auto mx-auto font-sans text-slate-800 p-2">
           <Container className="border border-slate-200 rounded-[24px] my-[20px] mx-auto max-w-[600px] bg-white shadow-md">
             <Section className="p-6 sm:p-10">
@@ -58,7 +58,7 @@ export const WelcomeAccountEmail = ({
                 Xin chào {employeeName},
               </Text>
               <Text className="text-[14px] text-slate-600 mb-6 leading-relaxed">
-                Chào mừng bạn tham gia vào hệ thống phần mềm quản trị của Hupuna Group.
+                Chào mừng bạn tham gia vào hệ thống phần mềm quản trị của Công ty Chấm công.
                 Dưới đây là thông tin tài khoản truy cập hệ thống của bạn. Vì lý do bảo mật,
                 vui lòng thay đổi mật khẩu ngay trong lần đăng nhập đầu tiên.
               </Text>
@@ -95,13 +95,13 @@ export const WelcomeAccountEmail = ({
               {/* Footer */}
               <Section className="text-center">
                 <Text className="text-[13px] font-semibold text-slate-700 mt-2 mb-2">
-                  Hệ thống Quản lý Nhân sự Hupuna
+                  Hệ thống Quản lý Nhân sự Chấm công
                 </Text>
                 <Text className="text-[12px] text-slate-400 mt-1 mb-0">
                   Email được gửi tự động từ hệ thống.
                 </Text>
                 <Text className="text-[11px] text-slate-300 mt-4 mb-0">
-                  © 2026 Hupuna Group
+                  © 2026 Công ty Chấm công
                 </Text>
               </Section>
 

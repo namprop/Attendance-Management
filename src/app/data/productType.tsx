@@ -34,7 +34,7 @@ export interface Option {
 }
 
 export const optionSellers: Option[] = [
-  { label: "hupunaeeeeeeeeeeee", value: "1" },
+  { label: "abceeeeeeeeeeee", value: "1" },
   { label: "ketoan2", value: "2" },
   { label: "dola", value: "3" },
   { label: "máy in", value: "4" },
