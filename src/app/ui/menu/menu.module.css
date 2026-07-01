@@ -1,0 +1,136 @@
+.menuItem {
+  position: relative;
+  display: inline-block;
+  padding: 12px 16px;
+}
+
+.menuItem:hover {
+  background: var(--menu-hover-bg, #005ac3);
+  border-radius: 6px;
+}
+
+.active {
+  background: var(--menu-hover-bg, #005ac3) !important;
+  border-radius: 6px;
+  font-weight: 700;
+  color: #ffffff !important;
+  box-shadow: inset 0 -2px 0 rgba(255, 255, 255, 0.4);
+}
+
+.active * {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+/* ─── Submenu cấp 1 ─────────────────────────────────────────────────────── */
+.submenu1 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 230px;
+  background: var(--menu-hover-bg, #005ac3);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  z-index: 200;
+  padding: 5px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.22), 0 3px 8px rgba(0,0,0,0.10);
+  /* transition handled by inline style in React */
+  will-change: opacity, transform;
+  list-style: none;
+}
+
+/* Bridge vô hình giữ hover khi di chuột từ nav xuống dropdown */
+.submenu1::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: transparent;
+}
+
+/* CSS hover vẫn giữ cho fallback */
+.menuItem:hover > .submenu1 {
+  display: block;
+}
+
+/* ─── Animation ──────────────────────────────────────────────────────────── */
+@keyframes menuIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ─── Submenu cấp 2 ─────────────────────────────────────────────────────── */
+.submenuItem {
+  position: relative;
+  padding: 1px;
+  border-radius: 8px;
+}
+
+.submenu2 {
+  display: none;
+  position: absolute;
+  top: -8px;
+  left: calc(100% + 2px);
+  min-width: 220px;
+  background: var(--menu-hover-bg, #005ac3);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  z-index: 210;
+  padding: 5px;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.22);
+  animation: menuIn 0.18s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Bridge ngang cho submenu2 */
+.submenu2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 8px;
+  height: 100%;
+  background: transparent;
+}
+
+.submenuItem:hover > .submenu2 {
+  display: block;
+}
+
+/* ─── Force white text ───────────────────────────────────────────────────── */
+.submenu1 a, .submenu2 a, .submenuItem a, .menuItem > a, .mobileSidebar a {
+  color: #ffffff !important;
+}
+.submenu1 a *, .submenu2 a *, .submenuItem a *, .menuItem > a *, .mobileSidebar a * {
+  color: #ffffff !important;
+}
+
+/* ─── Hover items — smooth slide ────────────────────────────────────────── */
+.submenuItem a,
+.submenuItem div.flex {
+  transition: background 150ms ease, transform 130ms ease, padding-left 130ms ease;
+  border-radius: 7px;
+}
+
+.submenuItem a:hover,
+.submenuItem div.flex:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  padding-left: calc(12px + 4px) !important; /* nudge sang phải khi hover */
+}
+
+/* Active item */
+.submenuItem a.font-bold {
+  background-color: rgba(255, 255, 255, 0.22) !important;
+}
+
+/* ─── Mobile sidebar ─────────────────────────────────────────────────────── */
+.mobileSidebar {
+  overscroll-behavior: contain;
+}

@@ -1,0 +1,180 @@
+/**
+ * CKEditor 5 + A4 Print Styles
+ * Import file này vào globals.css hoặc layout.tsx
+ */
+
+/* ── Đã import CKEditor 5 base styles trong layout.tsx ─────────────────────────────────── */
+
+/* ── Khung soạn thảo trông giống trang A4 ──────────────────────────── */
+.ck-wrapper .ck.ck-editor {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.ck-wrapper .ck.ck-editor__main {
+  background: #f0f0f0;
+  padding: 24px;
+  min-height: 600px;
+}
+
+.ck-wrapper .ck.ck-editor__editable {
+  background: white;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border: none !important;
+  border-radius: 2px;
+  min-height: 540px;
+  padding: 2cm 2.5cm;
+  width: 21cm;
+  margin: 0 auto;
+
+  /* Typography chuẩn văn bản pháp lý VN */
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 13pt;
+  line-height: 1.5;
+  color: #000;
+}
+
+/* ── Headings trong hợp đồng ────────────────────────────────────────── */
+.ck-wrapper .ck-editor__editable h1,
+.ck-content h1 {
+  font-size: 16pt;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 12pt 0;
+}
+
+.ck-wrapper .ck-editor__editable h2,
+.ck-content h2 {
+  font-size: 14pt;
+  font-weight: bold;
+  text-align: center;
+  margin: 10pt 0;
+}
+
+.ck-wrapper .ck-editor__editable h3,
+.ck-content h3 {
+  font-size: 14pt;
+  font-weight: bold;
+  margin: 8pt 0;
+}
+
+.ck-wrapper .ck-editor__editable h4,
+.ck-content h4 {
+  font-size: 14pt;
+  font-weight: bold;
+  font-style: italic;
+  margin: 6pt 0;
+}
+
+/* ── Bảng trong hợp đồng ────────────────────────────────────────────── */
+.ck-content table,
+.contract-a4-preview table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8pt 0;
+  font-size: 13pt;
+}
+
+.ck-content table td,
+.ck-content table th,
+.contract-a4-preview table td,
+.contract-a4-preview table th {
+  border: 1px solid #000;
+  padding: 4pt 8pt;
+  vertical-align: top;
+}
+
+.ck-content table th {
+  background: #f5f5f5;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ── Variables highlight trong editor ──────────────────────────────── */
+.ck-content .contract-variable {
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 12pt;
+}
+
+/* ── Preview A4 ─────────────────────────────────────────────────────── */
+.contract-a4-preview {
+  background: white;
+  width: 21cm;
+  box-sizing: border-box;
+  min-height: 29.7cm;
+  margin: 0 auto;
+  padding: 2cm 1.5cm;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 13pt;
+  line-height: 1.5;
+  color: #000;
+}
+
+/* ── Các trường chưa điền trong preview ────────────────────────────── */
+.contract-a4-preview .contract-blank {
+  cursor: text;
+  border-bottom: 2px dotted transparent;
+}
+
+.contract-a4-preview .contract-blank.empty-field {
+  display: inline-block;
+  min-width: 100px;
+  min-height: 1.2em;
+  vertical-align: bottom;
+  border-bottom-color: #999;
+}
+
+/* ── Print styles ────────────────────────────────────────────────────── */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  /* Loại bỏ mọi giới hạn chiều cao và thanh cuộn của các thẻ cha */
+  html, body, #__next, .min-h-screen, .flex, .flex-1, .overflow-y-auto, .overflow-hidden {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    position: static !important;
+  }
+
+  .contract-print-area,
+  .contract-print-area * {
+    visibility: visible;
+  }
+
+  .contract-print-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contract-a4-preview {
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    margin: 0;
+    padding: 0 !important;
+    border: none;
+    min-height: auto;
+  }
+
+  /* Ẩn các class no-print */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Định dạng trang in thực tế */
+  @page {
+    size: A4 portrait;
+    margin: 2cm 2.5cm;
+  }
+}

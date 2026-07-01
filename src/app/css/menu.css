@@ -1,0 +1,100 @@
+.menu {
+    background-color: #0070F4;
+}
+
+/*menu */
+.menu ul {
+    /* border: 1px solid #000000; */
+}
+
+.menu ul li {
+    display: inline-block;
+    font-size: 15px;
+    position: relative;
+    padding: 10px 15px;
+}
+
+.menu ul li:hover {
+    cursor: pointer;
+    background-color: #005ac3;
+    border-radius: 5px;
+}
+
+.menu ul>li:last-child {
+    position: absolute;
+    right: 0;
+}
+
+.menu ul ul>li:last-child {
+    position: relative;
+    right: 0;
+}
+
+.menu ul li a {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.menu ul ul {
+    position: absolute;
+    background-color: #005ac3;
+    padding: 10px 0;
+    top: 100%;
+    left: 0;
+    border: 1px solid #e1e1e1;
+    display: none;
+    min-width: 250px;
+    border-radius: 5px;
+}
+
+.menu ul ul li {
+    margin: 0;
+    padding: 10px 0 10px 25px;
+    position: unset;
+    display: block;
+}
+.menu ul ul li:hover {
+    background-color: #0070F4;
+}
+
+.menu ul li:hover ul {
+    display: block;
+    z-index: 50;
+    animation: menu-dropdown .3s ease;
+}
+
+.menu ul ul ul {
+    position: absolute;
+    top: -1px;
+    left: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .2s ease;
+    animation: none;
+}
+
+.menu ul ul li:hover ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* End menu  */
+
+@keyframes menu-dropdown {
+    0% {
+        transform-origin: 50% 0;
+        transform: perspective(500px) rotateX(-90deg);
+    }
+
+    100% {
+        transform-origin: 50% 0;
+        transform: perspective(500px) rotateX(0);
+    }
+}
+
+.active-tab-menu {
+    background-color: #005ac3;
+    border-radius: 5px;
+}

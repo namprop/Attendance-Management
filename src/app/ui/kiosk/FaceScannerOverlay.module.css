@@ -1,0 +1,46 @@
+/* FaceScannerOverlay.module.css */
+
+/* Overlay covering the entire scanner area */
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  /* subtle gradient for premium feel */
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.45), rgba(10, 10, 10, 0.55));
+}
+
+/* Central message box */
+.box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.75rem;
+  padding: 1rem 2rem;
+  max-width: 80%;
+  text-align: center;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.message {
+  color: #f3f4f6; /* slate-100 */
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.sub {
+  color: #a7f3d0; /* emerald-200 */
+  font-size: 1rem;
+  margin-top: 0.4rem;
+}
+
+.error {
+  color: #f87171; /* rose-400 */
+  font-size: 1rem;
+  font-weight: 600;
+}
